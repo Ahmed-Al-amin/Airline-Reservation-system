@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Increased preferred height slightly -->
+<VBox prefHeight="430.0" prefWidth="450.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airline.controller.PaymentController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Payment Details" />
+
+    <Label fx:id="flightDetailsLabel" text="Flight: " />
+    <!-- Changed Label for seats -->
+    <Label fx:id="seatsToBookLabel" text="Selected Seats: " wrapText="true"/>
+    <!-- Changed Label for price -->
+    <Label fx:id="ticketPriceLabel" text="Total Price: " style="-fx-font-weight: bold;"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="5.0">
+        <Label text="Credit Card Number:" />
+        <TextField fx:id="creditCardField" promptText="Enter 15-16 digits" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="5.0">
+        <Label text="Payment Amount:" />
+        <!-- Consider setting prompt text dynamically based on total fare -->
+        <TextField fx:id="paymentAmountField" promptText="Enter total amount" />
+    </HBox>
+
+    <Label fx:id="paymentMessage" style="-fx-text-fill: blue;" wrapText="true" prefHeight="40.0"/>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+        <!-- Renamed onAction -->
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackOrFinish" text="Back to Booking" />
+        <Button fx:id="payButton" mnemonicParsing="false" onAction="#handlePay" text="Confirm Payment" />
+    </HBox>
+</VBox>

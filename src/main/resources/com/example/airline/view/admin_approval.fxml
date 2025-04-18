@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airline.controller.AdminApprovalController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Root Admin Panel" />
+    <Separator prefWidth="200.0" />
+
+    <Label style="-fx-font-weight: bold;" text="Pending Admin Registrations:" />
+    <ListView fx:id="pendingAdminsList" prefHeight="200.0" prefWidth="400.0" />
+    <Button fx:id="approveButton" mnemonicParsing="false" onAction="#handleApprove" text="Approve Selected Admin" />
+    <Separator prefWidth="200.0" />
+
+    <!-- New Button for User Management -->
+    <Button fx:id="manageUsersButton" mnemonicParsing="false" onAction="#handleManageUsers" text="Manage All Users" />
+    <Separator prefWidth="200.0" />
+
+
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button fx:id="backToLoginButton" mnemonicParsing="false" onAction="#handleBackToAdminLogin" text="Back (Logout)" /> <!-- Clarified action -->
+        <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" text="Logout Now" />
+    </HBox>
+</VBox>

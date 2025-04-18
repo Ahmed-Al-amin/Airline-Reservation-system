@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airline.controller.TicketViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Ticket Details" />
+
+    <Label fx:id="reservationIdLabel" text="Reservation ID: " />
+    <Label fx:id="passengerUsernameLabel" text="Passenger: " />
+    <Label fx:id="flightNumberLabel" text="Flight Number: " />
+    <Label fx:id="seatNumberLabel" text="Seat Number: " />
+    <Label fx:id="departureCityLabel" text="Departure City: " />
+    <Label fx:id="destinationCityLabel" text="Destination City: " />
+    <Label fx:id="departureDateTimeLabel" text="Departure: " />
+    <Label fx:id="arrivalDateTimeLabel" text="Arrival: " />
+    <Label fx:id="fareLabel" text="Fare Paid: " />
+
+    <HBox alignment="CENTER_RIGHT" spacing="10.0" VBox.vgrow="NEVER">
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackToHistory" text="Back to History" />
+    </HBox>
+</VBox>

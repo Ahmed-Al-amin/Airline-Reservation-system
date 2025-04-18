@@ -1,0 +1,47 @@
+.root {
+    -fx-font-family: "Arial";
+}
+
+.label {
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.text-field {
+    -fx-padding: 8px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+}
+
+.combo-box {
+    -fx-padding: 8px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+}
+
+.list-view {
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+}
+
+.table-view {
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
